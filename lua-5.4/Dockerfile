@@ -13,7 +13,8 @@ RUN /opt/build-lua.sh 5.4.0-work1
 
 FROM alpine:3.7
 
-WORKDIR /
+RUN mkdir /workspace/
+WORKDIR /workspace/
 
 COPY --from=builder /usr/local/ /usr/local/
 

@@ -19,7 +19,8 @@ RUN luarocks install mooni
 
 FROM alpine:3.7
 
-WORKDIR /
+RUN mkdir /workspace/
+WORKDIR /workspace/
 
 COPY --from=builder /usr/local/ /usr/local/
 

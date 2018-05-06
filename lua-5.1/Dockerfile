@@ -18,7 +18,8 @@ RUN /opt/build-luarocks.sh 2.4.4
 
 FROM alpine:3.7
 
-WORKDIR /
+RUN mkdir /workspace/
+WORKDIR /workspace/
 
 COPY --from=builder /usr/local/ /usr/local/
 
