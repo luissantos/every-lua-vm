@@ -1,0 +1,29 @@
+FROM alpine:3.7 as builder
+
+
+RUN apk update
+RUN apk add gcc
+RUN apk add curl
+RUN apk add make
+RUN apk add musl-dev
+RUN apk add readline-dev
+RUN apk add ncurses-dev
+
+ADD build-lua.sh /opt/
+RUN /opt/build-lua.sh 5.1.5
+
+
+ADD build-luarocks.sh /opt/
+RUN /opt/build-luarocks.sh 2.4.4
+
+FROM alpine:3.7
+
+WORKDIR /
+
+COPY --from=builder /usr/local/ /usr/local/
+
+RUN apk update
+RUN apk add readline
+RUN apk add curl
+
+ENTRYPOINT ["/usr/bin/env", "lua"]
