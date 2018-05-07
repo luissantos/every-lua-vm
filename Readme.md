@@ -21,7 +21,7 @@ All containers are based on alpine linux.
 | luissantos/every-lua-vm:lua-5.1 | 5.1 | 2.4.4 | x64 |
 | luissantos/every-lua-vm:lua-5.2 | 5.2 | 2.4.4 | x64 |
 | luissantos/every-lua-vm:lua-5.3 | 5.3 | 2.4.4 | x64 |
-| luissantos/every-lua-vm:lua-5.3 | 5.4 | none | x64 |
+| luissantos/every-lua-vm:lua-5.4 | 5.4 | none | x64 |
 | luissantos/every-lua-vm:luajit-2.0 | 5.1 | 2.4.4 | x64 |
 | luissantos/every-lua-vm:luajit-2.1 | 5.1 | none | x64 |
 
