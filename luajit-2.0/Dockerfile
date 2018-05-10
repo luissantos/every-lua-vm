@@ -23,5 +23,6 @@ COPY --from=builder /usr/local/ /usr/local/
 
 RUN apk update
 RUN apk add libgcc
+RUN apk add curl
 
 ENTRYPOINT ["/usr/bin/env", "luajit"]
